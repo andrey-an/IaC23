@@ -1,0 +1,1350 @@
+go test -v ./ -timeout 30m -folder 'b1gv92ajpadl54osvc89' -ssh-key-pass ~/.ssh/yc
+=== RUN   TestEndToEndDeploymentScenario
+TestEndToEndDeploymentScenario 2023-10-24T23:51:03+03:00 test_structure.go:27: The 'SKIP_setup' environment variable is not set, so executing stage 'setup'.
+TestEndToEndDeploymentScenario 2023-10-24T23:51:03+03:00 save_test_data.go:196: Storing test data in ../.test-data/TerraformOptions.json so it can be reused later
+TestEndToEndDeploymentScenario 2023-10-24T23:51:03+03:00 save_test_data.go:200: [WARNING] The named test data at path ../.test-data/TerraformOptions.json is non-empty. Save operation will overwrite existing value with "&{ ../ map[yc_folder:b1gv92ajpadl54osvc89] [] [] false  map[] map[] map[] 0 0s false false false false <nil> false 0 <nil> 0   false}".
+.
+TestEndToEndDeploymentScenario 2023-10-24T23:51:03+03:00 save_test_data.go:212: Marshalled JSON: {"TerraformBinary":"","TerraformDir":"../","Vars":{"yc_folder":"b1gv92ajpadl54osvc89"},"VarFiles":null,"Targets":null,"Lock":false,"LockTimeout":"","EnvVars":null,"BackendConfig":null,"RetryableTerraformErrors":null,"MaxRetries":0,"TimeBetweenRetries":0,"Upgrade":false,"Reconfigure":false,"MigrateState":false,"NoColor":false,"SshAgent":null,"NoStderr":false,"OutputMaxLineSize":0,"Logger":null,"Parallelism":0,"PlanFilePath":"","PluginDir":"","SetVarsAfterVarFiles":false}
+TestEndToEndDeploymentScenario 2023-10-24T23:51:03+03:00 retry.go:91: terraform [init -upgrade=false]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:03+03:00 logger.go:66: Running command terraform with args [init -upgrade=false]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:04+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:04+03:00 logger.go:66: Initializing the backend...
+TestEndToEndDeploymentScenario 2023-10-24T23:51:04+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:04+03:00 logger.go:66: Initializing provider plugins...
+TestEndToEndDeploymentScenario 2023-10-24T23:51:04+03:00 logger.go:66: - Reusing previous version of yandex-cloud/yandex from the dependency lock file
+TestEndToEndDeploymentScenario 2023-10-24T23:51:06+03:00 logger.go:66: - Using previously-installed yandex-cloud/yandex v0.99.1
+TestEndToEndDeploymentScenario 2023-10-24T23:51:06+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:06+03:00 logger.go:66: Terraform has been successfully initialized!
+TestEndToEndDeploymentScenario 2023-10-24T23:51:06+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:06+03:00 logger.go:66: You may now begin working with Terraform. Try running "terraform plan" to see
+TestEndToEndDeploymentScenario 2023-10-24T23:51:06+03:00 logger.go:66: any changes that are required for your infrastructure. All Terraform commands
+TestEndToEndDeploymentScenario 2023-10-24T23:51:06+03:00 logger.go:66: should now work.
+TestEndToEndDeploymentScenario 2023-10-24T23:51:06+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:06+03:00 logger.go:66: If you ever set or change modules or backend configuration for Terraform,
+TestEndToEndDeploymentScenario 2023-10-24T23:51:06+03:00 logger.go:66: rerun this command to reinitialize your working directory. If you forget, other
+TestEndToEndDeploymentScenario 2023-10-24T23:51:06+03:00 logger.go:66: commands will detect it and remind you to do so if necessary.
+TestEndToEndDeploymentScenario 2023-10-24T23:51:06+03:00 retry.go:91: terraform [apply -input=false -auto-approve -var yc_folder=b1gv92ajpadl54osvc89 -lock=false]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:06+03:00 logger.go:66: Running command terraform with args [apply -input=false -auto-approve -var yc_folder=b1gv92ajpadl54osvc89 -lock=false]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:07+03:00 logger.go:66: yandex_vpc_network.wp-network: Refreshing state... [id=enprg7prejockqj64vs8]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:16+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-c: Refreshing state... [id=b0c88oemhk9chttgpvio]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:16+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-b: Refreshing state... [id=e2ldj8f5fj0vkomecunl]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:16+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-a: Refreshing state... [id=e9bac9cvgbnrir1ccpug]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:17+03:00 logger.go:66: yandex_compute_instance.wp-app-2: Refreshing state... [id=epdjhopnsfafgkea5ke4]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:17+03:00 logger.go:66: yandex_compute_instance.wp-app-1: Refreshing state... [id=fhm1mpiilegjd8ae67f9]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:17+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Refreshing state... [id=c9qcpjk5oef630t8hmin]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:19+03:00 logger.go:66: yandex_lb_target_group.wp_tg: Refreshing state... [id=enpn7gpgaa322gqn7idt]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:21+03:00 logger.go:66: yandex_lb_network_load_balancer.wp_lb: Refreshing state... [id=enp97gbjdi65436sfno4]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: No changes. Your infrastructure matches the configuration.
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: Terraform has compared your real infrastructure against your configuration
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: and found no differences, so no changes are needed.
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: ╷
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: │ Warning: Argument is deprecated
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: │
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: │   with yandex_mdb_mysql_cluster.wp_mysql,
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: │   on db.tf line 8, in resource "yandex_mdb_mysql_cluster" "wp_mysql":
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: │    8: resource "yandex_mdb_mysql_cluster" "wp_mysql" {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: │
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: │ to manage databases, please switch to using a separate resource type
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: │ yandex_mdb_mysql_database
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: │
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: │ (and 2 more similar warnings elsewhere)
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: ╵
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: Outputs:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: database_host_fqdn = tolist([
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66:   "rc1b-or8inc3jajmcy6h6.mdb.yandexcloud.net",
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66:   "rc1c-dlit1raulwzacxvt.mdb.yandexcloud.net",
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: ])
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: load_balancer_public_ip = "51.250.7.34"
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: vm_linux_public_ip_address = "84.201.130.1"
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 test_structure.go:27: The 'SKIP_validate' environment variable is not set, so executing stage 'validate'.
+Run some tests...
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 save_test_data.go:228: Loading test data from ../.test-data/TerraformOptions.json
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 retry.go:91: terraform [output -no-color -json load_balancer_public_ip]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: Running command terraform with args [output -no-color -json load_balancer_public_ip]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: "51.250.7.34"
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 retry.go:91: terraform [output -no-color -json vm_linux_public_ip_address]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: Running command terraform with args [output -no-color -json vm_linux_public_ip_address]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:22+03:00 logger.go:66: "84.201.130.1"
+TestEndToEndDeploymentScenario 2023-10-24T23:51:27+03:00 test_structure.go:27: The 'SKIP_teardown' environment variable is not set, so executing stage 'teardown'.
+TestEndToEndDeploymentScenario 2023-10-24T23:51:27+03:00 save_test_data.go:228: Loading test data from ../.test-data/TerraformOptions.json
+TestEndToEndDeploymentScenario 2023-10-24T23:51:27+03:00 retry.go:91: terraform [destroy -auto-approve -input=false -var yc_folder=b1gv92ajpadl54osvc89 -lock=false]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:27+03:00 logger.go:66: Running command terraform with args [destroy -auto-approve -input=false -var yc_folder=b1gv92ajpadl54osvc89 -lock=false]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:28+03:00 logger.go:66: yandex_vpc_network.wp-network: Refreshing state... [id=enprg7prejockqj64vs8]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:45+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-a: Refreshing state... [id=e9bac9cvgbnrir1ccpug]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:45+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-b: Refreshing state... [id=e2ldj8f5fj0vkomecunl]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:45+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-c: Refreshing state... [id=b0c88oemhk9chttgpvio]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:46+03:00 logger.go:66: yandex_compute_instance.wp-app-1: Refreshing state... [id=fhm1mpiilegjd8ae67f9]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:46+03:00 logger.go:66: yandex_compute_instance.wp-app-2: Refreshing state... [id=epdjhopnsfafgkea5ke4]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:46+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Refreshing state... [id=c9qcpjk5oef630t8hmin]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:49+03:00 logger.go:66: yandex_lb_target_group.wp_tg: Refreshing state... [id=enpn7gpgaa322gqn7idt]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:51+03:00 logger.go:66: yandex_lb_network_load_balancer.wp_lb: Refreshing state... [id=enp97gbjdi65436sfno4]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66: Terraform used the selected providers to generate the following execution
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66: plan. Resource actions are indicated with the following symbols:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:   - destroy
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66: Terraform will perform the following actions:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:   # yandex_compute_instance.wp-app-1 will be destroyed
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:   - resource "yandex_compute_instance" "wp-app-1" {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - created_at                = "2023-10-24T20:40:45Z" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - folder_id                 = "b1gv92ajpadl54osvc89" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - fqdn                      = "fhm1mpiilegjd8ae67f9.auto.internal" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - id                        = "fhm1mpiilegjd8ae67f9" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - labels                    = {} -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - metadata                  = {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - "ssh-keys" = <<-EOT
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:                 ubuntu:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCbRzcUWUe+zxOyyzM+RQfJFKqMwrSSKquq2xbpXKgBFPr0JzFhmAmJWjpiJYzMu5A9Mqpm/dk665bz2Y6K5xtUehmPRKlGtMo0jl7GFkd8sdRpQcKAxlbizkI/KPMb3AYdHs8jjh4FGCIUpaH4JBEswt39Fcxa+HsnJLa3fdIV6I1p/4mcwJWx2REn1/gH/z9OJRlrgl4P8TcZXRAiCX7wdVZtjebksJPc67urfHVzHUQb+pHAEG/EP6OxTe4PrkmTAcsTYN02XBznSc55yoIqXS0+LJfNf9kkaYI6u6RuOasI9sEy/+SlC/MPJcXEMYQ5DOvs1Z6WMvUjZYX+Xx8X master@DESKTOP-BI0HNCU
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:             EOT
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         } -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - name                      = "wp-app-1" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - network_acceleration_type = "standard" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - platform_id               = "standard-v1" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - status                    = "running" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - zone                      = "ru-central1-a" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - boot_disk {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - auto_delete = true -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - device_name = "fhme2nfabldjklh1qigf" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - disk_id     = "fhme2nfabldjklh1qigf" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - mode        = "READ_WRITE" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - initialize_params {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:               - block_size = 4096 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:               - image_id   = "fd80viupr3qjr5g6g9du" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:               - size       = 3 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:               - type       = "network-hdd" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - metadata_options {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - aws_v1_http_endpoint = 1 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - aws_v1_http_token    = 2 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - gce_http_endpoint    = 1 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - gce_http_token       = 1 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - network_interface {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - index              = 0 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - ip_address         = "10.2.0.14" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - ipv4               = true -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - ipv6               = false -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - mac_address        = "d0:0d:1b:66:52:ab" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - nat                = true -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - nat_ip_address     = "84.201.130.1" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - nat_ip_version     = "IPV4" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - security_group_ids = [] -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - subnet_id          = "e9bac9cvgbnrir1ccpug" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - placement_policy {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - host_affinity_rules = [] -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - resources {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - core_fraction = 100 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - cores         = 2 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - gpus          = 0 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - memory        = 2 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - scheduling_policy {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - preemptible = false -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:   # yandex_compute_instance.wp-app-2 will be destroyed
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:   - resource "yandex_compute_instance" "wp-app-2" {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - created_at                = "2023-10-24T20:40:45Z" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - folder_id                 = "b1gv92ajpadl54osvc89" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - fqdn                      = "epdjhopnsfafgkea5ke4.auto.internal" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - id                        = "epdjhopnsfafgkea5ke4" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - labels                    = {} -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - metadata                  = {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - "ssh-keys" = <<-EOT
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:                 ubuntu:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCbRzcUWUe+zxOyyzM+RQfJFKqMwrSSKquq2xbpXKgBFPr0JzFhmAmJWjpiJYzMu5A9Mqpm/dk665bz2Y6K5xtUehmPRKlGtMo0jl7GFkd8sdRpQcKAxlbizkI/KPMb3AYdHs8jjh4FGCIUpaH4JBEswt39Fcxa+HsnJLa3fdIV6I1p/4mcwJWx2REn1/gH/z9OJRlrgl4P8TcZXRAiCX7wdVZtjebksJPc67urfHVzHUQb+pHAEG/EP6OxTe4PrkmTAcsTYN02XBznSc55yoIqXS0+LJfNf9kkaYI6u6RuOasI9sEy/+SlC/MPJcXEMYQ5DOvs1Z6WMvUjZYX+Xx8X master@DESKTOP-BI0HNCU
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:             EOT
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         } -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - name                      = "wp-app-2" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - network_acceleration_type = "standard" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - platform_id               = "standard-v1" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - status                    = "running" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - zone                      = "ru-central1-b" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - boot_disk {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - auto_delete = true -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - device_name = "epdalbhd1kobm6jicgvt" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - disk_id     = "epdalbhd1kobm6jicgvt" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - mode        = "READ_WRITE" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - initialize_params {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:               - block_size = 4096 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:               - image_id   = "fd80viupr3qjr5g6g9du" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:               - size       = 3 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:               - type       = "network-hdd" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - metadata_options {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - aws_v1_http_endpoint = 1 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - aws_v1_http_token    = 2 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - gce_http_endpoint    = 1 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - gce_http_token       = 1 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - network_interface {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - index              = 0 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - ip_address         = "10.3.0.11" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - ipv4               = true -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - ipv6               = false -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - mac_address        = "d0:0d:13:8e:33:7e" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - nat                = true -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - nat_ip_address     = "51.250.107.88" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - nat_ip_version     = "IPV4" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - security_group_ids = [] -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - subnet_id          = "e2ldj8f5fj0vkomecunl" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - placement_policy {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - host_affinity_rules = [] -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - resources {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - core_fraction = 100 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - cores         = 2 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - gpus          = 0 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - memory        = 2 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - scheduling_policy {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - preemptible = false -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:   # yandex_lb_network_load_balancer.wp_lb will be destroyed
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:   - resource "yandex_lb_network_load_balancer" "wp_lb" {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - created_at          = "2023-10-24T20:41:29Z" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - deletion_protection = false -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - folder_id           = "b1gv92ajpadl54osvc89" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - id                  = "enp97gbjdi65436sfno4" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - labels              = {} -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - name                = "wp-network-load-balancer" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - region_id           = "ru-central1" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - type                = "external" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - attached_target_group {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - target_group_id = "enpn7gpgaa322gqn7idt" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - healthcheck {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:               - healthy_threshold   = 2 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:               - interval            = 2 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:               - name                = "http" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:               - timeout             = 1 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:               - unhealthy_threshold = 2 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:               - http_options {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:                   - path = "/health" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:                   - port = 80 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:                 }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - listener {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - name        = "wp-listener" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - port        = 80 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - protocol    = "tcp" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - target_port = 80 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - external_address_spec {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:               - address    = "51.250.7.34" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:               - ip_version = "ipv4" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:   # yandex_lb_target_group.wp_tg will be destroyed
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:   - resource "yandex_lb_target_group" "wp_tg" {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - created_at = "2023-10-24T20:41:27Z" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - folder_id  = "b1gv92ajpadl54osvc89" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - id         = "enpn7gpgaa322gqn7idt" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - labels     = {} -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - name       = "wp-target-group" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - region_id  = "ru-central1" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - target {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - address   = "10.2.0.14" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - subnet_id = "e9bac9cvgbnrir1ccpug" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - target {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - address   = "10.3.0.11" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - subnet_id = "e2ldj8f5fj0vkomecunl" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:   # yandex_mdb_mysql_cluster.wp_mysql will be destroyed
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:   - resource "yandex_mdb_mysql_cluster" "wp_mysql" {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - allow_regeneration_host   = false -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - backup_retain_period_days = 7 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - created_at                = "2023-10-24T20:40:46Z" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - deletion_protection       = false -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - environment               = "PRODUCTION" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - folder_id                 = "b1gv92ajpadl54osvc89" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - health                    = "ALIVE" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - host_group_ids            = [] -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - id                        = "c9qcpjk5oef630t8hmin" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - labels                    = {} -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - mysql_config              = {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - "binlog_transaction_dependency_tracking" = "0"
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - "log_slow_rate_type"                     = "0"
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - "sql_mode"                               = "ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION"
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         } -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - name                      = "wp-mysql" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - network_id                = "enprg7prejockqj64vs8" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - security_group_ids        = [] -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - status                    = "RUNNING" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - version                   = "8.0" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - access {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - data_lens     = false -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - data_transfer = false -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - web_sql       = false -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - backup_window_start {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - hours   = 0 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - minutes = 0 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - database {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - name = "db" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - host {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - assign_public_ip = true -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - backup_priority  = 0 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - fqdn             = "rc1b-or8inc3jajmcy6h6.mdb.yandexcloud.net" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - priority         = 0 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - subnet_id        = "e2ldj8f5fj0vkomecunl" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - zone             = "ru-central1-b" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - host {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - assign_public_ip = true -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - backup_priority  = 0 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - fqdn             = "rc1c-dlit1raulwzacxvt.mdb.yandexcloud.net" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - priority         = 0 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - subnet_id        = "b0c88oemhk9chttgpvio" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - zone             = "ru-central1-c" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - maintenance_window {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - hour = 0 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - type = "ANYTIME" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - performance_diagnostics {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - enabled                      = false -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - sessions_sampling_interval   = 60 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - statements_sampling_interval = 600 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - resources {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - disk_size          = 16 -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - disk_type_id       = "network-ssd" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - resource_preset_id = "s2.micro" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - user {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - authentication_plugin = "MYSQL_NATIVE_PASSWORD" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - global_permissions    = [] -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - name                  = "user" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - password              = (sensitive value) -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - permission {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:               - database_name = "db" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:               - roles         = [
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:                   - "ALL",
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:                 ] -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:   # yandex_vpc_network.wp-network will be destroyed
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:   - resource "yandex_vpc_network" "wp-network" {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - created_at                = "2023-10-24T20:40:37Z" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - default_security_group_id = "enprumcup17cj768uagk" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - folder_id                 = "b1gv92ajpadl54osvc89" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - id                        = "enprg7prejockqj64vs8" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - labels                    = {} -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - name                      = "wp-network" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - subnet_ids                = [
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - "b0c88oemhk9chttgpvio",
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - "e2ldj8f5fj0vkomecunl",
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - "e9bac9cvgbnrir1ccpug",
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         ] -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:   # yandex_vpc_subnet.wp-subnet-a will be destroyed
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:   - resource "yandex_vpc_subnet" "wp-subnet-a" {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - created_at     = "2023-10-24T20:40:41Z" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - folder_id      = "b1gv92ajpadl54osvc89" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - id             = "e9bac9cvgbnrir1ccpug" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - labels         = {} -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - name           = "wp-subnet-a" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - network_id     = "enprg7prejockqj64vs8" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - v4_cidr_blocks = [
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - "10.2.0.0/16",
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         ] -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - v6_cidr_blocks = [] -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - zone           = "ru-central1-a" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:   # yandex_vpc_subnet.wp-subnet-b will be destroyed
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:   - resource "yandex_vpc_subnet" "wp-subnet-b" {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - created_at     = "2023-10-24T20:40:41Z" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - folder_id      = "b1gv92ajpadl54osvc89" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - id             = "e2ldj8f5fj0vkomecunl" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - labels         = {} -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - name           = "wp-subnet-b" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - network_id     = "enprg7prejockqj64vs8" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - v4_cidr_blocks = [
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - "10.3.0.0/16",
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         ] -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - v6_cidr_blocks = [] -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - zone           = "ru-central1-b" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:   # yandex_vpc_subnet.wp-subnet-c will be destroyed
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:   - resource "yandex_vpc_subnet" "wp-subnet-c" {
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - created_at     = "2023-10-24T20:40:42Z" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - folder_id      = "b1gv92ajpadl54osvc89" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - id             = "b0c88oemhk9chttgpvio" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - labels         = {} -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - name           = "wp-subnet-c" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - network_id     = "enprg7prejockqj64vs8" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - v4_cidr_blocks = [
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:           - "10.4.0.0/16",
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:         ] -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - v6_cidr_blocks = [] -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - zone           = "ru-central1-c" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66: Plan: 0 to add, 0 to change, 9 to destroy.
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66: Changes to Outputs:
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:   - database_host_fqdn         = [
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - "rc1b-or8inc3jajmcy6h6.mdb.yandexcloud.net",
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:       - "rc1c-dlit1raulwzacxvt.mdb.yandexcloud.net",
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:     ] -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:   - load_balancer_public_ip    = "51.250.7.34" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66:   - vm_linux_public_ip_address = "84.201.130.1" -> null
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66: yandex_lb_network_load_balancer.wp_lb: Destroying... [id=enp97gbjdi65436sfno4]
+TestEndToEndDeploymentScenario 2023-10-24T23:51:52+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Destroying... [id=c9qcpjk5oef630t8hmin]
+TestEndToEndDeploymentScenario 2023-10-24T23:52:00+03:00 logger.go:66: yandex_lb_network_load_balancer.wp_lb: Destruction complete after 9s
+TestEndToEndDeploymentScenario 2023-10-24T23:52:00+03:00 logger.go:66: yandex_lb_target_group.wp_tg: Destroying... [id=enpn7gpgaa322gqn7idt]
+TestEndToEndDeploymentScenario 2023-10-24T23:52:01+03:00 logger.go:66: yandex_lb_target_group.wp_tg: Destruction complete after 1s
+TestEndToEndDeploymentScenario 2023-10-24T23:52:01+03:00 logger.go:66: yandex_compute_instance.wp-app-1: Destroying... [id=fhm1mpiilegjd8ae67f9]
+TestEndToEndDeploymentScenario 2023-10-24T23:52:01+03:00 logger.go:66: yandex_compute_instance.wp-app-2: Destroying... [id=epdjhopnsfafgkea5ke4]
+TestEndToEndDeploymentScenario 2023-10-24T23:52:02+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9qcpjk5oef630t8hmin, 10s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:52:11+03:00 logger.go:66: yandex_compute_instance.wp-app-2: Still destroying... [id=epdjhopnsfafgkea5ke4, 10s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:52:11+03:00 logger.go:66: yandex_compute_instance.wp-app-1: Still destroying... [id=fhm1mpiilegjd8ae67f9, 10s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:52:12+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9qcpjk5oef630t8hmin, 20s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:52:21+03:00 logger.go:66: yandex_compute_instance.wp-app-1: Still destroying... [id=fhm1mpiilegjd8ae67f9, 20s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:52:21+03:00 logger.go:66: yandex_compute_instance.wp-app-2: Still destroying... [id=epdjhopnsfafgkea5ke4, 20s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:52:22+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9qcpjk5oef630t8hmin, 30s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:52:31+03:00 logger.go:66: yandex_compute_instance.wp-app-2: Still destroying... [id=epdjhopnsfafgkea5ke4, 30s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:52:31+03:00 logger.go:66: yandex_compute_instance.wp-app-1: Still destroying... [id=fhm1mpiilegjd8ae67f9, 30s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:52:32+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9qcpjk5oef630t8hmin, 40s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:52:38+03:00 logger.go:66: yandex_compute_instance.wp-app-2: Destruction complete after 36s
+TestEndToEndDeploymentScenario 2023-10-24T23:52:41+03:00 logger.go:66: yandex_compute_instance.wp-app-1: Still destroying... [id=fhm1mpiilegjd8ae67f9, 40s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:52:41+03:00 logger.go:66: yandex_compute_instance.wp-app-1: Destruction complete after 40s
+TestEndToEndDeploymentScenario 2023-10-24T23:52:41+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-a: Destroying... [id=e9bac9cvgbnrir1ccpug]
+TestEndToEndDeploymentScenario 2023-10-24T23:52:42+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9qcpjk5oef630t8hmin, 50s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:52:48+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-a: Destruction complete after 6s
+TestEndToEndDeploymentScenario 2023-10-24T23:52:52+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9qcpjk5oef630t8hmin, 1m0s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:53:02+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9qcpjk5oef630t8hmin, 1m10s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:53:12+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9qcpjk5oef630t8hmin, 1m20s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:53:22+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9qcpjk5oef630t8hmin, 1m30s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:53:32+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9qcpjk5oef630t8hmin, 1m40s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:53:33+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Destruction complete after 1m41s
+TestEndToEndDeploymentScenario 2023-10-24T23:53:33+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-b: Destroying... [id=e2ldj8f5fj0vkomecunl]
+TestEndToEndDeploymentScenario 2023-10-24T23:53:33+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-c: Destroying... [id=b0c88oemhk9chttgpvio]
+TestEndToEndDeploymentScenario 2023-10-24T23:53:37+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-c: Destruction complete after 4s
+TestEndToEndDeploymentScenario 2023-10-24T23:53:40+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-b: Destruction complete after 8s
+TestEndToEndDeploymentScenario 2023-10-24T23:53:40+03:00 logger.go:66: yandex_vpc_network.wp-network: Destroying... [id=enprg7prejockqj64vs8]
+TestEndToEndDeploymentScenario 2023-10-24T23:53:41+03:00 logger.go:66: yandex_vpc_network.wp-network: Destruction complete after 1s
+TestEndToEndDeploymentScenario 2023-10-24T23:53:41+03:00 logger.go:66: ╷
+TestEndToEndDeploymentScenario 2023-10-24T23:53:41+03:00 logger.go:66: │ Warning: Argument is deprecated
+TestEndToEndDeploymentScenario 2023-10-24T23:53:41+03:00 logger.go:66: │
+TestEndToEndDeploymentScenario 2023-10-24T23:53:41+03:00 logger.go:66: │   with yandex_mdb_mysql_cluster.wp_mysql,
+TestEndToEndDeploymentScenario 2023-10-24T23:53:41+03:00 logger.go:66: │   on db.tf line 8, in resource "yandex_mdb_mysql_cluster" "wp_mysql":
+TestEndToEndDeploymentScenario 2023-10-24T23:53:41+03:00 logger.go:66: │    8: resource "yandex_mdb_mysql_cluster" "wp_mysql" {
+TestEndToEndDeploymentScenario 2023-10-24T23:53:41+03:00 logger.go:66: │
+TestEndToEndDeploymentScenario 2023-10-24T23:53:41+03:00 logger.go:66: │ to manage databases, please switch to using a separate resource type
+TestEndToEndDeploymentScenario 2023-10-24T23:53:41+03:00 logger.go:66: │ yandex_mdb_mysql_database
+TestEndToEndDeploymentScenario 2023-10-24T23:53:41+03:00 logger.go:66: ╵
+TestEndToEndDeploymentScenario 2023-10-24T23:53:41+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:53:41+03:00 logger.go:66: Destroy complete! Resources: 9 destroyed.
+TestEndToEndDeploymentScenario 2023-10-24T23:53:41+03:00 logger.go:66:
+--- PASS: TestEndToEndDeploymentScenario (157.93s)
+PASS
+ok      test    157.957s
+master@DESKTOP-BI0HNCU:~/OTUS/IaC23/2_terraform/test$ go test -v ./ -timeout 30m -folder 'b1gv92ajpadl54osvc89' -ssh-key-pass ~/.ssh/yc
+=== RUN   TestEndToEndDeploymentScenario
+TestEndToEndDeploymentScenario 2023-10-24T23:54:37+03:00 test_structure.go:27: The 'SKIP_setup' environment variable is not set, so executing stage 'setup'.
+TestEndToEndDeploymentScenario 2023-10-24T23:54:37+03:00 save_test_data.go:196: Storing test data in ../.test-data/TerraformOptions.json so it can be reused later
+TestEndToEndDeploymentScenario 2023-10-24T23:54:37+03:00 save_test_data.go:200: [WARNING] The named test data at path ../.test-data/TerraformOptions.json is non-empty. Save operation will overwrite existing value with "&{ ../ map[yc_folder:b1gv92ajpadl54osvc89] [] [] false  map[] map[] map[] 0 0s false false false false <nil> false 0 <nil> 0   false}".
+.
+TestEndToEndDeploymentScenario 2023-10-24T23:54:37+03:00 save_test_data.go:212: Marshalled JSON: {"TerraformBinary":"","TerraformDir":"../","Vars":{"yc_folder":"b1gv92ajpadl54osvc89"},"VarFiles":null,"Targets":null,"Lock":false,"LockTimeout":"","EnvVars":null,"BackendConfig":null,"RetryableTerraformErrors":null,"MaxRetries":0,"TimeBetweenRetries":0,"Upgrade":false,"Reconfigure":false,"MigrateState":false,"NoColor":false,"SshAgent":null,"NoStderr":false,"OutputMaxLineSize":0,"Logger":null,"Parallelism":0,"PlanFilePath":"","PluginDir":"","SetVarsAfterVarFiles":false}
+TestEndToEndDeploymentScenario 2023-10-24T23:54:37+03:00 retry.go:91: terraform [init -upgrade=false]
+TestEndToEndDeploymentScenario 2023-10-24T23:54:37+03:00 logger.go:66: Running command terraform with args [init -upgrade=false]
+TestEndToEndDeploymentScenario 2023-10-24T23:54:37+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:37+03:00 logger.go:66: Initializing the backend...
+TestEndToEndDeploymentScenario 2023-10-24T23:54:37+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:37+03:00 logger.go:66: Initializing provider plugins...
+TestEndToEndDeploymentScenario 2023-10-24T23:54:37+03:00 logger.go:66: - Reusing previous version of yandex-cloud/yandex from the dependency lock file
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66: - Using previously-installed yandex-cloud/yandex v0.99.1
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66: Terraform has been successfully initialized!
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66: You may now begin working with Terraform. Try running "terraform plan" to see
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66: any changes that are required for your infrastructure. All Terraform commands
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66: should now work.
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66: If you ever set or change modules or backend configuration for Terraform,
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66: rerun this command to reinitialize your working directory. If you forget, other
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66: commands will detect it and remind you to do so if necessary.
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 retry.go:91: terraform [apply -input=false -auto-approve -var yc_folder=b1gv92ajpadl54osvc89 -lock=false]
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66: Running command terraform with args [apply -input=false -auto-approve -var yc_folder=b1gv92ajpadl54osvc89 -lock=false]
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66: Terraform used the selected providers to generate the following execution
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66: plan. Resource actions are indicated with the following symbols:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:   + create
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66: Terraform will perform the following actions:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:   # yandex_compute_instance.wp-app-1 will be created
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:   + resource "yandex_compute_instance" "wp-app-1" {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + created_at                = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + folder_id                 = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + fqdn                      = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + gpu_cluster_id            = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + hostname                  = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + id                        = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + metadata                  = {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + "ssh-keys" = <<-EOT
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:                 ubuntu:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCbRzcUWUe+zxOyyzM+RQfJFKqMwrSSKquq2xbpXKgBFPr0JzFhmAmJWjpiJYzMu5A9Mqpm/dk665bz2Y6K5xtUehmPRKlGtMo0jl7GFkd8sdRpQcKAxlbizkI/KPMb3AYdHs8jjh4FGCIUpaH4JBEswt39Fcxa+HsnJLa3fdIV6I1p/4mcwJWx2REn1/gH/z9OJRlrgl4P8TcZXRAiCX7wdVZtjebksJPc67urfHVzHUQb+pHAEG/EP6OxTe4PrkmTAcsTYN02XBznSc55yoIqXS0+LJfNf9kkaYI6u6RuOasI9sEy/+SlC/MPJcXEMYQ5DOvs1Z6WMvUjZYX+Xx8X master@DESKTOP-BI0HNCU
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:             EOT
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + name                      = "wp-app-1"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + network_acceleration_type = "standard"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + platform_id               = "standard-v1"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + service_account_id        = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + status                    = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + zone                      = "ru-central1-a"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + boot_disk {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + auto_delete = true
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + device_name = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + disk_id     = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + mode        = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + initialize_params {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + block_size  = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + description = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + image_id    = "fd80viupr3qjr5g6g9du"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + name        = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + size        = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + snapshot_id = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + type        = "network-hdd"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + network_interface {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + index              = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + ip_address         = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + ipv4               = true
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + ipv6               = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + ipv6_address       = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + mac_address        = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + nat                = true
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + nat_ip_address     = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + nat_ip_version     = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + security_group_ids = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + subnet_id          = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + resources {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + core_fraction = 100
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + cores         = 2
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + memory        = 2
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:   # yandex_compute_instance.wp-app-2 will be created
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:   + resource "yandex_compute_instance" "wp-app-2" {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + created_at                = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + folder_id                 = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + fqdn                      = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + gpu_cluster_id            = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + hostname                  = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + id                        = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + metadata                  = {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + "ssh-keys" = <<-EOT
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:                 ubuntu:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCbRzcUWUe+zxOyyzM+RQfJFKqMwrSSKquq2xbpXKgBFPr0JzFhmAmJWjpiJYzMu5A9Mqpm/dk665bz2Y6K5xtUehmPRKlGtMo0jl7GFkd8sdRpQcKAxlbizkI/KPMb3AYdHs8jjh4FGCIUpaH4JBEswt39Fcxa+HsnJLa3fdIV6I1p/4mcwJWx2REn1/gH/z9OJRlrgl4P8TcZXRAiCX7wdVZtjebksJPc67urfHVzHUQb+pHAEG/EP6OxTe4PrkmTAcsTYN02XBznSc55yoIqXS0+LJfNf9kkaYI6u6RuOasI9sEy/+SlC/MPJcXEMYQ5DOvs1Z6WMvUjZYX+Xx8X master@DESKTOP-BI0HNCU
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:             EOT
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + name                      = "wp-app-2"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + network_acceleration_type = "standard"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + platform_id               = "standard-v1"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + service_account_id        = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + status                    = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + zone                      = "ru-central1-b"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + boot_disk {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + auto_delete = true
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + device_name = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + disk_id     = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + mode        = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + initialize_params {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + block_size  = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + description = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + image_id    = "fd80viupr3qjr5g6g9du"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + name        = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + size        = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + snapshot_id = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + type        = "network-hdd"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + network_interface {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + index              = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + ip_address         = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + ipv4               = true
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + ipv6               = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + ipv6_address       = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + mac_address        = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + nat                = true
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + nat_ip_address     = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + nat_ip_version     = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + security_group_ids = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + subnet_id          = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + resources {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + core_fraction = 100
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + cores         = 2
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + memory        = 2
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:   # yandex_lb_network_load_balancer.wp_lb will be created
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:   + resource "yandex_lb_network_load_balancer" "wp_lb" {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + created_at          = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + deletion_protection = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + folder_id           = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + id                  = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + name                = "wp-network-load-balancer"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + region_id           = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + type                = "external"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + attached_target_group {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + target_group_id = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + healthcheck {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + healthy_threshold   = 2
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + interval            = 2
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + name                = "http"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + timeout             = 1
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + unhealthy_threshold = 2
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + http_options {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:                   + path = "/health"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:                   + port = 80
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:                 }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + listener {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + name        = "wp-listener"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + port        = 80
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + protocol    = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + target_port = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + external_address_spec {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + address    = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + ip_version = "ipv4"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:   # yandex_lb_target_group.wp_tg will be created
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:   + resource "yandex_lb_target_group" "wp_tg" {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + created_at = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + folder_id  = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + id         = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + name       = "wp-target-group"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + region_id  = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + target {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + address   = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + subnet_id = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + target {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + address   = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + subnet_id = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:   # yandex_mdb_mysql_cluster.wp_mysql will be created
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:   + resource "yandex_mdb_mysql_cluster" "wp_mysql" {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + allow_regeneration_host   = false
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + backup_retain_period_days = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + created_at                = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + deletion_protection       = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + environment               = "PRODUCTION"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + folder_id                 = "b1gv92ajpadl54osvc89"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + health                    = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + host_group_ids            = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + id                        = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + mysql_config              = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + name                      = "wp-mysql"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + network_id                = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + status                    = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + version                   = "8.0"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + database {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + name = "db"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + host {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + assign_public_ip   = true
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + fqdn               = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + replication_source = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + subnet_id          = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + zone               = "ru-central1-b"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + host {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + assign_public_ip   = true
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + fqdn               = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + replication_source = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + subnet_id          = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + zone               = "ru-central1-c"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + resources {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + disk_size          = 16
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + disk_type_id       = "network-ssd"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + resource_preset_id = "s2.micro"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + user {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + authentication_plugin = "MYSQL_NATIVE_PASSWORD"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + global_permissions    = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + name                  = "user"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + password              = (sensitive value)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + permission {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + database_name = "db"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:               + roles         = [
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:                   + "ALL",
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:                 ]
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:   # yandex_vpc_network.wp-network will be created
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:   + resource "yandex_vpc_network" "wp-network" {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + created_at                = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + default_security_group_id = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + folder_id                 = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + id                        = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + labels                    = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + name                      = "wp-network"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + subnet_ids                = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:   # yandex_vpc_subnet.wp-subnet-a will be created
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:   + resource "yandex_vpc_subnet" "wp-subnet-a" {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + created_at     = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + folder_id      = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + id             = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + labels         = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + name           = "wp-subnet-a"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + network_id     = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + v4_cidr_blocks = [
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + "10.2.0.0/16",
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:         ]
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + v6_cidr_blocks = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + zone           = "ru-central1-a"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:   # yandex_vpc_subnet.wp-subnet-b will be created
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:   + resource "yandex_vpc_subnet" "wp-subnet-b" {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + created_at     = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + folder_id      = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + id             = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + labels         = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + name           = "wp-subnet-b"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + network_id     = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + v4_cidr_blocks = [
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + "10.3.0.0/16",
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:         ]
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + v6_cidr_blocks = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + zone           = "ru-central1-b"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:   # yandex_vpc_subnet.wp-subnet-c will be created
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:   + resource "yandex_vpc_subnet" "wp-subnet-c" {
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + created_at     = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + folder_id      = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + id             = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + labels         = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + name           = "wp-subnet-c"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + network_id     = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + v4_cidr_blocks = [
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:           + "10.4.0.0/16",
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:         ]
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + v6_cidr_blocks = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + zone           = "ru-central1-c"
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66: Plan: 9 to add, 0 to change, 0 to destroy.
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66: Changes to Outputs:
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:   + database_host_fqdn         = [
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + (known after apply),
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:       + (known after apply),
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:     ]
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:   + load_balancer_public_ip    = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66:   + vm_linux_public_ip_address = (known after apply)
+TestEndToEndDeploymentScenario 2023-10-24T23:54:40+03:00 logger.go:66: yandex_vpc_network.wp-network: Creating...
+TestEndToEndDeploymentScenario 2023-10-24T23:54:50+03:00 logger.go:66: yandex_vpc_network.wp-network: Creation complete after 10s [id=enpcdoj2tjot6glmtr2e]
+TestEndToEndDeploymentScenario 2023-10-24T23:54:50+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-b: Creating...
+TestEndToEndDeploymentScenario 2023-10-24T23:54:50+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-a: Creating...
+TestEndToEndDeploymentScenario 2023-10-24T23:54:50+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-c: Creating...
+TestEndToEndDeploymentScenario 2023-10-24T23:54:52+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-b: Creation complete after 1s [id=e2lgse8q6qt83qrdeqtl]
+TestEndToEndDeploymentScenario 2023-10-24T23:54:52+03:00 logger.go:66: yandex_compute_instance.wp-app-2: Creating...
+TestEndToEndDeploymentScenario 2023-10-24T23:54:52+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-a: Creation complete after 2s [id=e9b2u750t6mfda1gqo91]
+TestEndToEndDeploymentScenario 2023-10-24T23:54:52+03:00 logger.go:66: yandex_compute_instance.wp-app-1: Creating...
+TestEndToEndDeploymentScenario 2023-10-24T23:54:53+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-c: Creation complete after 3s [id=b0clk2k2pdermn9e6p58]
+TestEndToEndDeploymentScenario 2023-10-24T23:54:53+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Creating...
+TestEndToEndDeploymentScenario 2023-10-24T23:55:02+03:00 logger.go:66: yandex_compute_instance.wp-app-2: Still creating... [10s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:55:02+03:00 logger.go:66: yandex_compute_instance.wp-app-1: Still creating... [10s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:55:03+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [10s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:55:12+03:00 logger.go:66: yandex_compute_instance.wp-app-2: Still creating... [20s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:55:12+03:00 logger.go:66: yandex_compute_instance.wp-app-1: Still creating... [20s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:55:13+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [20s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:55:22+03:00 logger.go:66: yandex_compute_instance.wp-app-2: Still creating... [30s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:55:22+03:00 logger.go:66: yandex_compute_instance.wp-app-1: Still creating... [30s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:55:23+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [30s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:55:31+03:00 logger.go:66: yandex_compute_instance.wp-app-2: Creation complete after 40s [id=epdqmsff17a7ija1kd4n]
+TestEndToEndDeploymentScenario 2023-10-24T23:55:32+03:00 logger.go:66: yandex_compute_instance.wp-app-1: Still creating... [40s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:55:33+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [40s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:55:42+03:00 logger.go:66: yandex_compute_instance.wp-app-1: Still creating... [50s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:55:43+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [50s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:55:51+03:00 logger.go:66: yandex_compute_instance.wp-app-1: Creation complete after 58s [id=fhmb1h7hj21c8l0o57hr]
+TestEndToEndDeploymentScenario 2023-10-24T23:55:51+03:00 logger.go:66: yandex_lb_target_group.wp_tg: Creating...
+TestEndToEndDeploymentScenario 2023-10-24T23:55:53+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [1m0s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:55:55+03:00 logger.go:66: yandex_lb_target_group.wp_tg: Creation complete after 5s [id=enpk76u5bc4mc57nmum3]
+TestEndToEndDeploymentScenario 2023-10-24T23:55:55+03:00 logger.go:66: yandex_lb_network_load_balancer.wp_lb: Creating...
+TestEndToEndDeploymentScenario 2023-10-24T23:56:00+03:00 logger.go:66: yandex_lb_network_load_balancer.wp_lb: Creation complete after 5s [id=enpag8q4j0jltnsgeco6]
+TestEndToEndDeploymentScenario 2023-10-24T23:56:03+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [1m10s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:56:13+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [1m20s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:56:23+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [1m30s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:56:33+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [1m40s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:56:43+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [1m50s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:56:53+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [2m0s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:57:03+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [2m10s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:57:13+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [2m20s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:57:23+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [2m30s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:57:33+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [2m40s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:57:43+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [2m50s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:57:53+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [3m0s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:58:03+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [3m10s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:58:13+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [3m20s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:58:23+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [3m30s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:58:33+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [3m40s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:58:43+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [3m50s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:58:53+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [4m0s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:59:03+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [4m10s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:59:13+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [4m20s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:59:23+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [4m30s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:59:33+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [4m40s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:59:43+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [4m50s elapsed]
+TestEndToEndDeploymentScenario 2023-10-24T23:59:53+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [5m0s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:00:03+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [5m10s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:00:13+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [5m20s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:00:23+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [5m30s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:00:33+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [5m40s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:00:43+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [5m50s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:00:53+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [6m0s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:01:03+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [6m10s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:01:13+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [6m20s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:01:23+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [6m30s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:01:33+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [6m40s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:01:43+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [6m50s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:01:53+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [7m0s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:03+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still creating... [7m10s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Creation complete after 7m14s [id=c9qon1dutr78k3nqfp9m]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66: ╷
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66: │ Warning: Argument is deprecated
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66: │
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66: │   with yandex_mdb_mysql_cluster.wp_mysql,
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66: │   on db.tf line 8, in resource "yandex_mdb_mysql_cluster" "wp_mysql":
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66: │    8: resource "yandex_mdb_mysql_cluster" "wp_mysql" {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66: │
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66: │ to manage databases, please switch to using a separate resource type
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66: │ yandex_mdb_mysql_database
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66: │
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66: │ (and 4 more similar warnings elsewhere)
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66: ╵
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66: Apply complete! Resources: 9 added, 0 changed, 0 destroyed.
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66: Outputs:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66: database_host_fqdn = tolist([
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66:   "rc1b-1jc50oxyxcchqwul.mdb.yandexcloud.net",
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66:   "rc1c-9vgvbroxr2vuzk63.mdb.yandexcloud.net",
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66: ])
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66: load_balancer_public_ip = "51.250.80.169"
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66: vm_linux_public_ip_address = "51.250.85.49"
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 test_structure.go:27: The 'SKIP_validate' environment variable is not set, so executing stage 'validate'.
+Run some tests...
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 save_test_data.go:228: Loading test data from ../.test-data/TerraformOptions.json
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 retry.go:91: terraform [output -no-color -json load_balancer_public_ip]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66: Running command terraform with args [output -no-color -json load_balancer_public_ip]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66: "51.250.80.169"
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 retry.go:91: terraform [output -no-color -json vm_linux_public_ip_address]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:07+03:00 logger.go:66: Running command terraform with args [output -no-color -json vm_linux_public_ip_address]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:08+03:00 logger.go:66: "51.250.85.49"
+TestEndToEndDeploymentScenario 2023-10-25T00:02:14+03:00 test_structure.go:27: The 'SKIP_teardown' environment variable is not set, so executing stage 'teardown'.
+TestEndToEndDeploymentScenario 2023-10-25T00:02:14+03:00 save_test_data.go:228: Loading test data from ../.test-data/TerraformOptions.json
+TestEndToEndDeploymentScenario 2023-10-25T00:02:14+03:00 retry.go:91: terraform [destroy -auto-approve -input=false -var yc_folder=b1gv92ajpadl54osvc89 -lock=false]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:14+03:00 logger.go:66: Running command terraform with args [destroy -auto-approve -input=false -var yc_folder=b1gv92ajpadl54osvc89 -lock=false]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:14+03:00 logger.go:66: yandex_vpc_network.wp-network: Refreshing state... [id=enpcdoj2tjot6glmtr2e]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:25+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-b: Refreshing state... [id=e2lgse8q6qt83qrdeqtl]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:25+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-a: Refreshing state... [id=e9b2u750t6mfda1gqo91]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:25+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-c: Refreshing state... [id=b0clk2k2pdermn9e6p58]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:26+03:00 logger.go:66: yandex_compute_instance.wp-app-1: Refreshing state... [id=fhmb1h7hj21c8l0o57hr]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:26+03:00 logger.go:66: yandex_compute_instance.wp-app-2: Refreshing state... [id=epdqmsff17a7ija1kd4n]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:26+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Refreshing state... [id=c9qon1dutr78k3nqfp9m]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:29+03:00 logger.go:66: yandex_lb_target_group.wp_tg: Refreshing state... [id=enpk76u5bc4mc57nmum3]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:32+03:00 logger.go:66: yandex_lb_network_load_balancer.wp_lb: Refreshing state... [id=enpag8q4j0jltnsgeco6]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66: Terraform used the selected providers to generate the following execution
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66: plan. Resource actions are indicated with the following symbols:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:   - destroy
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66: Terraform will perform the following actions:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:   # yandex_compute_instance.wp-app-1 will be destroyed
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:   - resource "yandex_compute_instance" "wp-app-1" {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - created_at                = "2023-10-24T20:54:55Z" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - folder_id                 = "b1gv92ajpadl54osvc89" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - fqdn                      = "fhmb1h7hj21c8l0o57hr.auto.internal" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - id                        = "fhmb1h7hj21c8l0o57hr" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - labels                    = {} -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - metadata                  = {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - "ssh-keys" = <<-EOT
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:                 ubuntu:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCbRzcUWUe+zxOyyzM+RQfJFKqMwrSSKquq2xbpXKgBFPr0JzFhmAmJWjpiJYzMu5A9Mqpm/dk665bz2Y6K5xtUehmPRKlGtMo0jl7GFkd8sdRpQcKAxlbizkI/KPMb3AYdHs8jjh4FGCIUpaH4JBEswt39Fcxa+HsnJLa3fdIV6I1p/4mcwJWx2REn1/gH/z9OJRlrgl4P8TcZXRAiCX7wdVZtjebksJPc67urfHVzHUQb+pHAEG/EP6OxTe4PrkmTAcsTYN02XBznSc55yoIqXS0+LJfNf9kkaYI6u6RuOasI9sEy/+SlC/MPJcXEMYQ5DOvs1Z6WMvUjZYX+Xx8X master@DESKTOP-BI0HNCU
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:             EOT
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         } -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - name                      = "wp-app-1" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - network_acceleration_type = "standard" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - platform_id               = "standard-v1" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - status                    = "running" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - zone                      = "ru-central1-a" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - boot_disk {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - auto_delete = true -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - device_name = "fhmc8krmubpk1rsm61jr" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - disk_id     = "fhmc8krmubpk1rsm61jr" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - mode        = "READ_WRITE" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - initialize_params {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:               - block_size = 4096 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:               - image_id   = "fd80viupr3qjr5g6g9du" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:               - size       = 3 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:               - type       = "network-hdd" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - metadata_options {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - aws_v1_http_endpoint = 1 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - aws_v1_http_token    = 2 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - gce_http_endpoint    = 1 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - gce_http_token       = 1 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - network_interface {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - index              = 0 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - ip_address         = "10.2.0.12" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - ipv4               = true -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - ipv6               = false -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - mac_address        = "d0:0d:b0:c4:f1:98" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - nat                = true -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - nat_ip_address     = "51.250.85.49" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - nat_ip_version     = "IPV4" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - security_group_ids = [] -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - subnet_id          = "e9b2u750t6mfda1gqo91" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - placement_policy {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - host_affinity_rules = [] -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - resources {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - core_fraction = 100 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - cores         = 2 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - gpus          = 0 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - memory        = 2 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - scheduling_policy {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - preemptible = false -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:   # yandex_compute_instance.wp-app-2 will be destroyed
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:   - resource "yandex_compute_instance" "wp-app-2" {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - created_at                = "2023-10-24T20:54:54Z" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - folder_id                 = "b1gv92ajpadl54osvc89" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - fqdn                      = "epdqmsff17a7ija1kd4n.auto.internal" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - id                        = "epdqmsff17a7ija1kd4n" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - labels                    = {} -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - metadata                  = {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - "ssh-keys" = <<-EOT
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:                 ubuntu:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCbRzcUWUe+zxOyyzM+RQfJFKqMwrSSKquq2xbpXKgBFPr0JzFhmAmJWjpiJYzMu5A9Mqpm/dk665bz2Y6K5xtUehmPRKlGtMo0jl7GFkd8sdRpQcKAxlbizkI/KPMb3AYdHs8jjh4FGCIUpaH4JBEswt39Fcxa+HsnJLa3fdIV6I1p/4mcwJWx2REn1/gH/z9OJRlrgl4P8TcZXRAiCX7wdVZtjebksJPc67urfHVzHUQb+pHAEG/EP6OxTe4PrkmTAcsTYN02XBznSc55yoIqXS0+LJfNf9kkaYI6u6RuOasI9sEy/+SlC/MPJcXEMYQ5DOvs1Z6WMvUjZYX+Xx8X master@DESKTOP-BI0HNCU
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:             EOT
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         } -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - name                      = "wp-app-2" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - network_acceleration_type = "standard" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - platform_id               = "standard-v1" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - status                    = "running" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - zone                      = "ru-central1-b" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - boot_disk {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - auto_delete = true -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - device_name = "epd6oe1bukn92fr6l6pu" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - disk_id     = "epd6oe1bukn92fr6l6pu" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - mode        = "READ_WRITE" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - initialize_params {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:               - block_size = 4096 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:               - image_id   = "fd80viupr3qjr5g6g9du" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:               - size       = 3 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:               - type       = "network-hdd" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - metadata_options {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - aws_v1_http_endpoint = 1 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - aws_v1_http_token    = 2 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - gce_http_endpoint    = 1 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - gce_http_token       = 1 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - network_interface {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - index              = 0 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - ip_address         = "10.3.0.16" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - ipv4               = true -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - ipv6               = false -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - mac_address        = "d0:0d:1a:b7:1e:f0" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - nat                = true -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - nat_ip_address     = "51.250.26.220" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - nat_ip_version     = "IPV4" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - security_group_ids = [] -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - subnet_id          = "e2lgse8q6qt83qrdeqtl" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - placement_policy {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - host_affinity_rules = [] -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - resources {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - core_fraction = 100 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - cores         = 2 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - gpus          = 0 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - memory        = 2 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - scheduling_policy {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - preemptible = false -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:   # yandex_lb_network_load_balancer.wp_lb will be destroyed
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:   - resource "yandex_lb_network_load_balancer" "wp_lb" {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - created_at          = "2023-10-24T20:55:56Z" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - deletion_protection = false -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - folder_id           = "b1gv92ajpadl54osvc89" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - id                  = "enpag8q4j0jltnsgeco6" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - labels              = {} -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - name                = "wp-network-load-balancer" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - region_id           = "ru-central1" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - type                = "external" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - attached_target_group {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - target_group_id = "enpk76u5bc4mc57nmum3" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - healthcheck {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:               - healthy_threshold   = 2 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:               - interval            = 2 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:               - name                = "http" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:               - timeout             = 1 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:               - unhealthy_threshold = 2 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:               - http_options {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:                   - path = "/health" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:                   - port = 80 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:                 }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - listener {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - name        = "wp-listener" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - port        = 80 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - protocol    = "tcp" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - target_port = 80 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - external_address_spec {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:               - address    = "51.250.80.169" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:               - ip_version = "ipv4" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:   # yandex_lb_target_group.wp_tg will be destroyed
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:   - resource "yandex_lb_target_group" "wp_tg" {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - created_at = "2023-10-24T20:55:52Z" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - folder_id  = "b1gv92ajpadl54osvc89" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - id         = "enpk76u5bc4mc57nmum3" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - labels     = {} -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - name       = "wp-target-group" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - region_id  = "ru-central1" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - target {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - address   = "10.2.0.12" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - subnet_id = "e9b2u750t6mfda1gqo91" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - target {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - address   = "10.3.0.16" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - subnet_id = "e2lgse8q6qt83qrdeqtl" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:   # yandex_mdb_mysql_cluster.wp_mysql will be destroyed
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:   - resource "yandex_mdb_mysql_cluster" "wp_mysql" {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - allow_regeneration_host   = false -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - backup_retain_period_days = 7 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - created_at                = "2023-10-24T20:54:55Z" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - deletion_protection       = false -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - environment               = "PRODUCTION" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - folder_id                 = "b1gv92ajpadl54osvc89" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - health                    = "HEALTH_UNKNOWN" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - host_group_ids            = [] -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - id                        = "c9qon1dutr78k3nqfp9m" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - labels                    = {} -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - mysql_config              = {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - "binlog_transaction_dependency_tracking" = "0"
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - "log_slow_rate_type"                     = "0"
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - "sql_mode"                               = "ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION"
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         } -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - name                      = "wp-mysql" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - network_id                = "enpcdoj2tjot6glmtr2e" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - security_group_ids        = [] -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - status                    = "RUNNING" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - version                   = "8.0" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - access {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - data_lens     = false -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - data_transfer = false -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - web_sql       = false -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - backup_window_start {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - hours   = 0 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - minutes = 0 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - database {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - name = "db" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - host {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - assign_public_ip = true -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - backup_priority  = 0 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - fqdn             = "rc1b-1jc50oxyxcchqwul.mdb.yandexcloud.net" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - priority         = 0 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - subnet_id        = "e2lgse8q6qt83qrdeqtl" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - zone             = "ru-central1-b" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - host {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - assign_public_ip = true -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - backup_priority  = 0 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - fqdn             = "rc1c-9vgvbroxr2vuzk63.mdb.yandexcloud.net" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - priority         = 0 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - subnet_id        = "b0clk2k2pdermn9e6p58" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - zone             = "ru-central1-c" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - maintenance_window {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - hour = 0 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - type = "ANYTIME" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - performance_diagnostics {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - enabled                      = false -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - sessions_sampling_interval   = 60 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - statements_sampling_interval = 600 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - resources {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - disk_size          = 16 -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - disk_type_id       = "network-ssd" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - resource_preset_id = "s2.micro" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - user {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - authentication_plugin = "MYSQL_NATIVE_PASSWORD" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - global_permissions    = [] -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - name                  = "user" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - password              = (sensitive value) -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - permission {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:               - database_name = "db" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:               - roles         = [
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:                   - "ALL",
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:                 ] -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:   # yandex_vpc_network.wp-network will be destroyed
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:   - resource "yandex_vpc_network" "wp-network" {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - created_at                = "2023-10-24T20:54:48Z" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - default_security_group_id = "enpe0au1boaber44uk2s" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - folder_id                 = "b1gv92ajpadl54osvc89" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - id                        = "enpcdoj2tjot6glmtr2e" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - labels                    = {} -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - name                      = "wp-network" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - subnet_ids                = [
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - "b0clk2k2pdermn9e6p58",
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - "e2lgse8q6qt83qrdeqtl",
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - "e9b2u750t6mfda1gqo91",
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         ] -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:   # yandex_vpc_subnet.wp-subnet-a will be destroyed
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:   - resource "yandex_vpc_subnet" "wp-subnet-a" {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - created_at     = "2023-10-24T20:54:51Z" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - folder_id      = "b1gv92ajpadl54osvc89" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - id             = "e9b2u750t6mfda1gqo91" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - labels         = {} -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - name           = "wp-subnet-a" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - network_id     = "enpcdoj2tjot6glmtr2e" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - v4_cidr_blocks = [
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - "10.2.0.0/16",
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         ] -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - v6_cidr_blocks = [] -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - zone           = "ru-central1-a" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:   # yandex_vpc_subnet.wp-subnet-b will be destroyed
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:   - resource "yandex_vpc_subnet" "wp-subnet-b" {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - created_at     = "2023-10-24T20:54:51Z" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - folder_id      = "b1gv92ajpadl54osvc89" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - id             = "e2lgse8q6qt83qrdeqtl" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - labels         = {} -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - name           = "wp-subnet-b" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - network_id     = "enpcdoj2tjot6glmtr2e" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - v4_cidr_blocks = [
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - "10.3.0.0/16",
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         ] -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - v6_cidr_blocks = [] -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - zone           = "ru-central1-b" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:   # yandex_vpc_subnet.wp-subnet-c will be destroyed
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:   - resource "yandex_vpc_subnet" "wp-subnet-c" {
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - created_at     = "2023-10-24T20:54:52Z" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - folder_id      = "b1gv92ajpadl54osvc89" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - id             = "b0clk2k2pdermn9e6p58" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - labels         = {} -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - name           = "wp-subnet-c" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - network_id     = "enpcdoj2tjot6glmtr2e" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - v4_cidr_blocks = [
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:           - "10.4.0.0/16",
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:         ] -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - v6_cidr_blocks = [] -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - zone           = "ru-central1-c" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66: Plan: 0 to add, 0 to change, 9 to destroy.
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66: Changes to Outputs:
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:   - database_host_fqdn         = [
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - "rc1b-1jc50oxyxcchqwul.mdb.yandexcloud.net",
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:       - "rc1c-9vgvbroxr2vuzk63.mdb.yandexcloud.net",
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:     ] -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:   - load_balancer_public_ip    = "51.250.80.169" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66:   - vm_linux_public_ip_address = "51.250.85.49" -> null
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66: yandex_lb_network_load_balancer.wp_lb: Destroying... [id=enpag8q4j0jltnsgeco6]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:34+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Destroying... [id=c9qon1dutr78k3nqfp9m]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:43+03:00 logger.go:66: yandex_lb_network_load_balancer.wp_lb: Destruction complete after 8s
+TestEndToEndDeploymentScenario 2023-10-25T00:02:43+03:00 logger.go:66: yandex_lb_target_group.wp_tg: Destroying... [id=enpk76u5bc4mc57nmum3]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:44+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9qon1dutr78k3nqfp9m, 10s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:46+03:00 logger.go:66: yandex_lb_target_group.wp_tg: Destruction complete after 3s
+TestEndToEndDeploymentScenario 2023-10-25T00:02:46+03:00 logger.go:66: yandex_compute_instance.wp-app-2: Destroying... [id=epdqmsff17a7ija1kd4n]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:46+03:00 logger.go:66: yandex_compute_instance.wp-app-1: Destroying... [id=fhmb1h7hj21c8l0o57hr]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:54+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9qon1dutr78k3nqfp9m, 20s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:56+03:00 logger.go:66: yandex_compute_instance.wp-app-1: Still destroying... [id=fhmb1h7hj21c8l0o57hr, 10s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:02:56+03:00 logger.go:66: yandex_compute_instance.wp-app-2: Still destroying... [id=epdqmsff17a7ija1kd4n, 10s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:03:04+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9qon1dutr78k3nqfp9m, 30s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:03:06+03:00 logger.go:66: yandex_compute_instance.wp-app-1: Still destroying... [id=fhmb1h7hj21c8l0o57hr, 20s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:03:06+03:00 logger.go:66: yandex_compute_instance.wp-app-2: Still destroying... [id=epdqmsff17a7ija1kd4n, 20s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:03:14+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9qon1dutr78k3nqfp9m, 40s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:03:16+03:00 logger.go:66: yandex_compute_instance.wp-app-2: Still destroying... [id=epdqmsff17a7ija1kd4n, 30s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:03:16+03:00 logger.go:66: yandex_compute_instance.wp-app-1: Still destroying... [id=fhmb1h7hj21c8l0o57hr, 30s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:03:24+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9qon1dutr78k3nqfp9m, 50s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:03:25+03:00 logger.go:66: yandex_compute_instance.wp-app-2: Destruction complete after 39s
+TestEndToEndDeploymentScenario 2023-10-25T00:03:26+03:00 logger.go:66: yandex_compute_instance.wp-app-1: Still destroying... [id=fhmb1h7hj21c8l0o57hr, 40s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:03:27+03:00 logger.go:66: yandex_compute_instance.wp-app-1: Destruction complete after 41s
+TestEndToEndDeploymentScenario 2023-10-25T00:03:27+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-a: Destroying... [id=e9b2u750t6mfda1gqo91]
+TestEndToEndDeploymentScenario 2023-10-25T00:03:31+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-a: Destruction complete after 4s
+TestEndToEndDeploymentScenario 2023-10-25T00:03:34+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9qon1dutr78k3nqfp9m, 1m0s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:03:44+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9qon1dutr78k3nqfp9m, 1m10s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:03:54+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9qon1dutr78k3nqfp9m, 1m20s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:04:04+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9qon1dutr78k3nqfp9m, 1m30s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:04:14+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9qon1dutr78k3nqfp9m, 1m40s elapsed]
+TestEndToEndDeploymentScenario 2023-10-25T00:04:17+03:00 logger.go:66: yandex_mdb_mysql_cluster.wp_mysql: Destruction complete after 1m42s
+TestEndToEndDeploymentScenario 2023-10-25T00:04:17+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-c: Destroying... [id=b0clk2k2pdermn9e6p58]
+TestEndToEndDeploymentScenario 2023-10-25T00:04:17+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-b: Destroying... [id=e2lgse8q6qt83qrdeqtl]
+TestEndToEndDeploymentScenario 2023-10-25T00:04:19+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-c: Destruction complete after 3s
+TestEndToEndDeploymentScenario 2023-10-25T00:04:22+03:00 logger.go:66: yandex_vpc_subnet.wp-subnet-b: Destruction complete after 6s
+TestEndToEndDeploymentScenario 2023-10-25T00:04:22+03:00 logger.go:66: yandex_vpc_network.wp-network: Destroying... [id=enpcdoj2tjot6glmtr2e]
+TestEndToEndDeploymentScenario 2023-10-25T00:04:23+03:00 logger.go:66: yandex_vpc_network.wp-network: Destruction complete after 1s
+TestEndToEndDeploymentScenario 2023-10-25T00:04:23+03:00 logger.go:66: ╷
+TestEndToEndDeploymentScenario 2023-10-25T00:04:23+03:00 logger.go:66: │ Warning: Argument is deprecated
+TestEndToEndDeploymentScenario 2023-10-25T00:04:23+03:00 logger.go:66: │
+TestEndToEndDeploymentScenario 2023-10-25T00:04:23+03:00 logger.go:66: │   with yandex_mdb_mysql_cluster.wp_mysql,
+TestEndToEndDeploymentScenario 2023-10-25T00:04:23+03:00 logger.go:66: │   on db.tf line 8, in resource "yandex_mdb_mysql_cluster" "wp_mysql":
+TestEndToEndDeploymentScenario 2023-10-25T00:04:23+03:00 logger.go:66: │    8: resource "yandex_mdb_mysql_cluster" "wp_mysql" {
+TestEndToEndDeploymentScenario 2023-10-25T00:04:23+03:00 logger.go:66: │
+TestEndToEndDeploymentScenario 2023-10-25T00:04:23+03:00 logger.go:66: │ to manage databases, please switch to using a separate resource type
+TestEndToEndDeploymentScenario 2023-10-25T00:04:23+03:00 logger.go:66: │ yandex_mdb_mysql_database
+TestEndToEndDeploymentScenario 2023-10-25T00:04:23+03:00 logger.go:66: ╵
+TestEndToEndDeploymentScenario 2023-10-25T00:04:23+03:00 logger.go:66:
+TestEndToEndDeploymentScenario 2023-10-25T00:04:23+03:00 logger.go:66: Destroy complete! Resources: 9 destroyed.
+TestEndToEndDeploymentScenario 2023-10-25T00:04:23+03:00 logger.go:66:
+--- PASS: TestEndToEndDeploymentScenario (586.36s)
+PASS
+ok      test    586.393s
