@@ -41,3 +41,10 @@ override.tf.json
 terraform.rc
 
 # End of https://www.toptal.com/developers/gitignore/api/terraform
+
+### Go Patch ###
+vendor
+Godeps
+
+*output.tf
+.test-data
